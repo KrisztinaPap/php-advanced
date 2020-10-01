@@ -27,6 +27,7 @@
                 break;
         }
     }
+    var_dump( $result );
 ?>
 
 <p>
@@ -63,6 +64,13 @@
     </label>
     <input type="submit" value="Calculate!">
 </form>
+
+<?php if ( $result != FALSE ) : ?> 
+    <p>
+    Your result for your calculation is:
+        <?php echo $result; ?>
+    </p>
+<?php endif; ?>
 
 <?php 
     include './templates/footer.php';
