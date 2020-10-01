@@ -7,7 +7,7 @@
             </a>
         </li>
         <li>
-            <a href="calculator.php">
+            <a href="calc.php">
                 Calculator
             </a>
         </li>
