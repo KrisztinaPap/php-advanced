@@ -3,6 +3,7 @@
     <p>
         &copy;
         <?php echo date( 'Y' ); ?>
+        TECHCareers
     </p>
 </footer>
 </body>
