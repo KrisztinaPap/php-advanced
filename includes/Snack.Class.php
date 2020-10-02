@@ -13,7 +13,7 @@ class Snack
         $this->name = $name;
         $this->type = $type;
         $this->price = number_format( $price, 2, '.', ',' ); // '.' for decimals, ',' for thousands
-        $this->calories = $calories;
+        $this->calories = intval( $calories ); // Converts to integer
     }
 }
 
