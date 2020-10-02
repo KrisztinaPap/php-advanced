@@ -15,7 +15,13 @@
         {
             foreach ( $snacksArray as $snack )
             {
-                $snacks[] = new Snack( ...$snack );
+                // $snacks[] = new Snack( ...$snack );
+                $snacks[] = new Snack(
+                    $snack[0],
+                    $snack[1],
+                    $snack[2],
+                    $snack[3]
+                );
             }
             // var_dump( $snacks );
         }
