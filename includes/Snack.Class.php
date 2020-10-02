@@ -15,8 +15,16 @@ class Snack
         $this->price = number_format( $price, 2, '.', ',' ); // '.' for decimals, ',' for thousands
         $this->calories = intval( $calories ); // Converts to integer
     }
+
+    public function caramelize()
+    {
+        $this->calories *= 2;
+    }
 }
 
 $mySnack = new Snack ( 'Oh Henry', 'chocolate', 1.89, 200 );
 var_dump ( $mySnack );
+
+$mySnack->caramelize();
+var_dump( $mySnack );
 ?>
