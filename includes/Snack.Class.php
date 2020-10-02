@@ -38,9 +38,11 @@ class Snack
     }
 }
 
-$mySnack = new Snack ( 'Oh Henry', 'chocolate', 1.89, 200 );
-var_dump ( $mySnack );
+// $mySnack = new Snack ( 'Oh Henry', 'chocolate', 1.89, 200 );
+// var_dump ( $mySnack );
 
-$mySnack->caramelize();
-var_dump( $mySnack );
+// $mySnack->caramelize();
+// var_dump( $mySnack );
+
+// $mySnack->output();
 ?>
