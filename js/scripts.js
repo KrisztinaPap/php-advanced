@@ -4,6 +4,7 @@ const snackResults = document.getElementById( 'search-results' );
 
 snackSearchForm.addEventListener( 'submit', event => {
     event.preventDefault();
+    snackResults.innerHTML = '';
     fetch ( `http://localhost:80/api/snacks.php?search=${snackSearchInput.value}` )
         .then( response => response.json() )
         .then( data => {
