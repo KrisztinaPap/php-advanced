@@ -12,7 +12,18 @@ if ( isset( $_GET['search'] ) && ( !empty( $_GET['search'] ) ) )
         $snackList = json_decode( $snacksJSONString ); 
         if ( $snackList !== NULL)
         {
-            
+            $matchingSnacks = array();
+            foreach ( $snackList as $snack )
+            {
+                if ( stristr( $snack[0], $_GET['search'] ) )
+                {
+                    array_push( $matchingSnacks, $snack );
+                }
+            }
+            if (!empty( $matchingSnacks ))
+            {
+                echo json_encode( $matchingSnacks );
+            }
         }
         else
         {
