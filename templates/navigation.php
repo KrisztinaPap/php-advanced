@@ -16,5 +16,10 @@
                 Snacks! (OOP)
             </a>
         </li>
+        <li>
+            <a href="cat-facts-api.php">
+                Cat Facts (API)
+            </a>
+        </li>
     </ul>
 </nav>
