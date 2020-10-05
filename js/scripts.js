@@ -22,6 +22,7 @@ snackSearchForm.addEventListener( 'submit', event => {
                     </dl>
                 `;
                 snackResults.append( snackLI );
+                snackSearchInput.value = '';
             }
         } )
 
