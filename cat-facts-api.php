@@ -23,7 +23,12 @@
         <label for="amount">Enter the Amount of Facts:
         <input type="number" id="amount" name="amount"></label>
         <label for="animal-type">Enter the Type of Animal:
-        <input type="text" id="animal-type" name="type"></label>
+            <select id="animal-type" name="type">
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+                <option value="horse">Horse</option>
+                <option value="snail">Snail</option>
+        </label>
         <input type="submit" value="Get Animal Facts!">
     </form>    
 
