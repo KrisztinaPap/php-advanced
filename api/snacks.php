@@ -6,7 +6,15 @@ if ( isset( $_GET['search'] ) && ( !empty( $_GET['search'] ) ) )
 {
     // echo "{\"response\":\"Search term: {$_GET['search']}\"}";
     $snacksJSONString = file_get_contents( '../data/snacks.json' );
-    echo $snacksJSONString;
+    // echo $snacksJSONString;
+    if ( $snacksJSONString )
+    {
+
+    }
+    else 
+    {
+        echo "{\"response\":\"ERROR: Unable to retrieve Snacks list.\"}";
+    }
 }
 else
 {
