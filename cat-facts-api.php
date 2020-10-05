@@ -45,13 +45,17 @@
                 <h2>List of 
                 <?php echo ucfirst( $_POST['type']) ; ?>
                 Facts</h2>
-            <ol>
-                <?php foreach ( $factsList as $fact ) : ?>
-                    <li>
-                        <?php echo $fact->text; ?>
-                    </li>
-                <?php endforeach; ?>
-            </ol>
+                <?php if ( !empty( $factsList ) ) : ?>
+                    <ol>
+                        <?php foreach ( $factsList as $fact ) : ?>
+                            <li>
+                                <?php echo $fact->text; ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ol>
+                <?php else : ?>
+                    <p>No facts found.</p>
+                <?php endif; ?>
             <?php
         }
     }
