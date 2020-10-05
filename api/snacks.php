@@ -7,9 +7,17 @@ if ( isset( $_GET['search'] ) && ( !empty( $_GET['search'] ) ) )
     // echo "{\"response\":\"Search term: {$_GET['search']}\"}";
     $snacksJSONString = file_get_contents( '../data/snacks.json' );
     // echo $snacksJSONString;
-    if ( $snacksJSONString )
+    if ( $snacksJSONString !== FALSE )
     {
-
+        $snackList = json_decode( $snacksJSONString ); 
+        if ( $snackList !== NULL)
+        {
+            
+        }
+        else
+        {
+            echo "{\"response\":\"ERROR: Unable to convert Snacks list from JSON.\"}";
+        }
     }
     else 
     {
