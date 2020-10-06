@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack Search (AJAX + API)</title>
+    <title>Snack Search React (React + AJAX + API)</title>
 
     <!-- Style(s) -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- Script(s) -->
     <script type="text/JavaScript" src="js/scripts.js" defer></script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load Babel. -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Our React script(s) -->
+    <script type="text/jsx" src="js/react-example.js" defer></script>
 </head>
 <body>
-    <h1>Snack Search (AJAX + API)</h1>
+    <h1>Snack Search React (React + AJAX + API)</h1>
     <nav>
     <h2>Website Navigation</h2>
     <ul>
@@ -49,22 +60,7 @@
     </ul>
 </nav>
 
-<h2>Snack Search Form</h2>
-
-<form id="search-form">
-    <label for="search-input">
-        Name of Snack:
-        <input
-            id="search-input"
-            type="search"
-            name="search">
-    </label>
-    <input type="submit" value="Search Snacks">
-</form>
-
-<h3>Snack Search Results:</h3>
-
-<ul id="search-results"></ul>
+<section id="react-root"></section>
 
 <footer>
     <h2>Footer Details</h2>
