@@ -6,7 +6,11 @@ const SearchForm = props => {
 
     const submitSearch = event => {
         event.preventDefault();
-        console.log ( 'Submitted form!');
+        fetch( `http://localhost:80/api/snacks.php?search=${search}` )
+            .then( response => response.json() )
+            .then( data => {
+                console.log(data);
+            } )
     }
 
     return (
