@@ -3,14 +3,16 @@ const reactRoot = document.getElementById('react-root');
 const SearchForm = props => {
 
     const [search, setSearch] = React.useState( '' );
+    const [snacks, setSnacks] = React.useState( [] );
 
     const submitSearch = event => {
         event.preventDefault();
         fetch( `http://localhost:80/api/snacks.php?search=${search}` )
             .then( response => response.json() )
             .then( data => {
-                console.log(data);
+                setSnacks( data );
             } )
+            .catch( error => { throw error } );
     }
 
     return (
@@ -30,7 +32,21 @@ const SearchForm = props => {
                     value="Search Snacks" />
             </form>
             <h3>Snack Search Results</h3>
-            <ul></ul>
+            <ul>
+                {snacks.map( (snack, index) => (
+                    <li key={index}>
+                        <h4>{snack[0]}</h4>
+                        <dl>
+                            <dt>Snack Type:</dt>
+                            <dd>{snack[1]}</dd>
+                            <dt>Snack Price:</dt>
+                            <dd>${parseFloat( snack[2] ).toFixed(2)}</dd>
+                            <dt>Snack Calories:</dt>
+                            <dd>{snack[3]}</dd>
+                        </dl>
+                    </li>
+                ) )}
+            </ul>
         </React.Fragment>
     )
 }
